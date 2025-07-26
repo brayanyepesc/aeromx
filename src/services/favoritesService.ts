@@ -1,4 +1,4 @@
-import { Character } from '../types/character'
+import { Character } from "rickmortyapi";
 
 export class FavoritesService {
   static validateCharacter(character: Character): boolean {
