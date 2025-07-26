@@ -18,10 +18,47 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background-image: url('/backgrounds/space-bg.webp');
+  background-size: cover;
+  background-position: -600px 120%;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(to bottom, #9EDF25, #1E2E00);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-position: -800px 70%;
+  }
+  
+  body::after {
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-position: -740px 70%;
+  }
+  
+  body::after {
+    height: 50px;
+  }
 }
 
 * {
