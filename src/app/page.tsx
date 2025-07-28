@@ -7,6 +7,7 @@ import { useFavoritesStore } from "../store/favoritesStore";
 import SearchBar from "../components/ui/SearchBar";
 import CharacterList from "../components/ui/CharacterList";
 import SelectedCharacter from "../components/ui/SelectedCharacter";
+import FavoritesDropdown from "../components/ui/FavoritesDropdown";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
   const { addFavorite, removeFavorite, isFavorite } = useFavoritesStore();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null);
+  const [isFavoritesOpen, setIsFavoritesOpen] = useState(false);
 
   useEffect(() => {
     if (characters.length > 0 && !selectedCharacter) {
@@ -41,6 +43,14 @@ export default function Home() {
     }
   };
 
+  const handleFavoritesClick = () => {
+    setIsFavoritesOpen(!isFavoritesOpen);
+  };
+
+  const handleCloseFavorites = () => {
+    setIsFavoritesOpen(false);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.selectedSection}>
@@ -55,7 +65,18 @@ export default function Home() {
           onLikeCharacter={handleLikeCharacter}
           loading={loading}
         />
-        <button className={styles.favsButton}>FAVS</button>
+        <div className={styles.favsContainer}>
+          <button 
+            className={`${styles.favsButton} ${isFavoritesOpen ? styles.favsButtonHover : ''}`}
+            onClick={handleFavoritesClick}
+          >
+            FAVS
+          </button>
+          <FavoritesDropdown 
+            isOpen={isFavoritesOpen} 
+            onClose={handleCloseFavorites} 
+          />
+        </div>
       </div>
     </div>
   );
