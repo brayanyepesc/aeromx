@@ -97,7 +97,7 @@
   background: rgba(0, 0, 0, 0.7);
   padding: 20px;
   color: white;
-  height: 170px;
+  height: 150px;
 
 }
 
@@ -122,7 +122,7 @@
 .detailsGrid {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   gap: 10px;
   text-align: left;
 }
@@ -145,3 +145,25 @@
   color: #FFFFFF;
   font-size: 16px;
 } 
+
+@media (max-width: 768px) {
+  .characterDetails {
+    padding: 10px;
+    height: 100px;
+  }
+  .characterName {
+    font-size: 12px;
+  }
+  .characterSpecies {
+    font-size: 12px;
+  }
+  .characterSubtitle {
+    font-size: 12px;
+  }
+  .detailLabel {
+    font-size: 12px;
+  }
+  .detailValue {
+    font-size: 12px;
+  }
+}

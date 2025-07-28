@@ -59,3 +59,10 @@
 .heartIcon.liked {
   color: #E40000;
 } 
+
+@media (max-width: 768px) {
+  .characterCard {
+    width: 200px;
+    height: 200px;
+  }
+}

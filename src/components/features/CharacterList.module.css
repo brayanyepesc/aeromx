@@ -51,3 +51,16 @@
   grid-column: 1 / -1;
   padding: 20px;
 } 
+
+@media (max-width: 768px) {
+  .scrollButton {
+    display: none;
+  }
+  .charactersGrid {
+    margin: 0px 20px;
+    gap: 20px;
+    flex-wrap: nowrap;
+    padding: 0px;
+    padding-top: 20px;
+  }
+}

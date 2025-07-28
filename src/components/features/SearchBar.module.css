@@ -31,3 +31,11 @@
   color: #76DD00;
   opacity: 0.7;
 } 
+
+@media (max-width: 768px) {
+  .searchContainer {
+    background-color: transparent;
+    width: 300px;
+    height: 60px;
+  }
+}

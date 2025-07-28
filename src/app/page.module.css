@@ -73,3 +73,47 @@
   background-color: #4A4A4A;
   color: #4CAF50;
 }
+
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 0px;
+    gap: 0px;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .logo {
+    width: 400px;
+    height: 150px;
+  }
+  .container {
+    background-color: transparent;
+    position: static;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .selectedSection {
+    order: 2;
+    flex: none;
+    width: 80%;
+    height: 35%;
+    border-radius: 1rem;
+    margin-top: 120px;
+  }
+
+  .listSection {
+    order: 1;
+    flex: none;
+    width: 100%;
+    height: 20%;
+    background-color: transparent;
+  }
+  .favsButton {
+    display: none;
+  } 
+}

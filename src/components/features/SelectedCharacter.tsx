@@ -40,7 +40,6 @@ export default function SelectedCharacter({ character }: SelectedCharacterProps)
       <div className={styles.characterDetails}>
         <h2 className={styles.characterName}>{character.name}</h2>
         <p className={styles.characterSpecies}>{character.species}</p>
-        <p className={styles.characterSubtitle}>Rick&apos;s Toxic Side</p>
         
         <div className={styles.detailsGrid}>
           <div className={styles.detailItem}>
