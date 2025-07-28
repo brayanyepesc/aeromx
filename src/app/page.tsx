@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Character } from "rickmortyapi";
 import { useCharacters } from "../hooks/useCharacters";
+import { useFavoritesStore } from "../store/favoritesStore";
 import SearchBar from "../components/ui/SearchBar";
 import CharacterList from "../components/ui/CharacterList";
 import SelectedCharacter from "../components/ui/SelectedCharacter";
@@ -10,9 +11,9 @@ import styles from "./page.module.css";
 
 export default function Home() {
   const { characters, loading, searchCharacters } = useCharacters();
+  const { addFavorite, removeFavorite, isFavorite } = useFavoritesStore();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null);
-  const [likedCharacters, setLikedCharacters] = useState<number[]>([]);
 
   useEffect(() => {
     if (characters.length > 0 && !selectedCharacter) {
@@ -30,11 +31,14 @@ export default function Home() {
   };
 
   const handleLikeCharacter = (characterId: number) => {
-    setLikedCharacters(prev => 
-      prev.includes(characterId) 
-        ? prev.filter(id => id !== characterId)
-        : [...prev, characterId]
-    );
+    const character = characters.find(char => char.id === characterId);
+    if (character) {
+      if (isFavorite(characterId)) {
+        removeFavorite(characterId);
+      } else {
+        addFavorite(character);
+      }
+    }
   };
 
   return (
@@ -47,7 +51,6 @@ export default function Home() {
         <CharacterList
           characters={characters}
           selectedCharacter={selectedCharacter}
-          likedCharacters={likedCharacters}
           onSelectCharacter={handleSelectCharacter}
           onLikeCharacter={handleLikeCharacter}
           loading={loading}

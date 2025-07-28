@@ -1,12 +1,12 @@
 import { Character } from "rickmortyapi";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
+import { useFavoritesStore } from "../../store/favoritesStore";
 import CharacterCard from "./CharacterCard";
 import styles from "./CharacterList.module.css";
 
 interface CharacterListProps {
   characters: Character[];
   selectedCharacter: Character | null;
-  likedCharacters: number[];
   onSelectCharacter: (character: Character) => void;
   onLikeCharacter: (characterId: number) => void;
   loading: boolean;
@@ -15,11 +15,12 @@ interface CharacterListProps {
 export default function CharacterList({
   characters,
   selectedCharacter,
-  likedCharacters,
   onSelectCharacter,
   onLikeCharacter,
   loading
 }: CharacterListProps) {
+  const { isFavorite } = useFavoritesStore();
+
   const handleScrollUp = () => {
     const grid = document.querySelector(`.${styles.charactersGrid}`) as HTMLElement;
     if (grid) {
@@ -48,7 +49,7 @@ export default function CharacterList({
             isSelected={selectedCharacter?.id === character.id}
             onSelect={onSelectCharacter}
             onLike={onLikeCharacter}
-            isLiked={likedCharacters.includes(character.id)}
+            isLiked={isFavorite(character.id)}
           />
         ))}
       </div>

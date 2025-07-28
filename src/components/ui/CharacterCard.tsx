@@ -1,6 +1,6 @@
 import { Character } from "rickmortyapi";
 import Image from "next/image";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
 import { getFirstName } from "../../utils/stringUtils";
 import styles from "./CharacterCard.module.css";
 
@@ -42,11 +42,7 @@ export default function CharacterCard({
           onLike(character.id);
         }}
       >
-        {isLiked ? (
-          <FaHeart className={`${styles.heartIcon} ${styles.liked}`} />
-        ) : (
-          <FaRegHeart className={styles.heartIcon} />
-        )}
+        <FaRegHeart size={24} className={`${styles.heartIcon} ${isLiked ? styles.liked : ''}`} />
         <span>Like</span>
       </div>
     </div>
