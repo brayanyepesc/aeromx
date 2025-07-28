@@ -1,6 +1,6 @@
 # 🚀 Rick & Morty Character App
 
-Una aplicación web moderna para explorar y gestionar personajes de Rick & Morty, construida con las últimas tecnologías web.
+Una aplicación web que gestiona personajes de Rick & Morty, construida con las últimas tecnologías web.
 
 ![Rick & Morty](https://img.shields.io/badge/Rick%20%26%20Morty-API-green)
 ![React](https://img.shields.io/badge/React-19.1.0-blue)
@@ -27,7 +27,7 @@ Una aplicación web moderna para explorar y gestionar personajes de Rick & Morty
 - 📱 **Diseño Responsivo** - Optimizado para desktop y mobile
 - 🎨 **UI Moderna** - Interfaz intuitiva con estados visuales
 - 🏷️ **Estados de Personajes** - Indicadores LIVE/DEAD dinámicos
-- 🧪 **Testing Completo** - Cobertura de funcionalidades críticas
+- 🧪 **Testing Completo** - Cobertura de funcionalidades básicas
 - ⚡ **Performance Optimizada** - Next.js con Turbopack
 
 ## 🛠️ Tecnologías Utilizadas
@@ -63,7 +63,7 @@ Una aplicación web moderna para explorar y gestionar personajes de Rick & Morty
 
 1. **Clonar el repositorio**
 ```bash
-git clone <repository-url>
+git clone <https://github.com/brayanyepesc/aeromx>
 cd aeromx
 ```
 
@@ -134,7 +134,7 @@ aeromx/
 
 ### Cobertura de Tests
 
-La aplicación incluye tests para las funcionalidades críticas:
+La aplicación incluye tests para las funcionalidades básicas:
 
 - ✅ **Store de Favoritos** - Agregar, remover y verificar favoritos
 - ✅ **Utilidades de Strings** - Limpieza de texto y extracción de nombres
@@ -161,20 +161,6 @@ Snapshots:   0 total
 Time:        8.187 s
 ```
 
-## 🎯 Funcionalidades Implementadas
-
-### ✅ Requerimientos Cumplidos
-
-- **React 19 + Next.js** ✅
-- **TypeScript** ✅
-- **CSS Modules** ✅
-- **Gestión de Personajes** ✅
-- **Sistema de Favoritos** ✅
-- **Estados de Botones** ✅
-- **Estados de Personajes (Alive/Dead)** ✅
-- **Diseño Responsivo** ✅
-- **Unit Tests** ✅
-
 ### 🎨 Características Adicionales
 
 - **Búsqueda en Tiempo Real** - Filtrado instantáneo de personajes
@@ -183,34 +169,15 @@ Time:        8.187 s
 - **Estados Visuales** - Hover, active, selected states
 - **Optimización de Performance** - Lazy loading y bundling optimizado
 
-## 📱 Diseño Responsivo
-
-### Desktop
-- Layout horizontal con grid de personajes
-- Panel lateral para personaje seleccionado
-- Navegación con scroll personalizado
-
-### Mobile
-- Layout vertical optimizado
-- Grid de 2 columnas para personajes
-- Navegación táctil mejorada
-- Logo reposicionado para mejor UX
-
 ## 🤔 Reflexiones del Desarrollo
 
 ### ❤️ Lo que más me gustó del desarrollo
 
 **1. Arquitectura Modular y Clean Code**
-Implementar una estructura de carpetas bien organizada siguiendo principios SOLID fue muy gratificante. La separación clara entre componentes, servicios, hooks y stores hizo que el código fuera mantenible y escalable.
+Implementar una estructura de carpetas bien organizada siguiendo principios SOLID fue muy gratificante. La separación clara entre componentes, servicios, hooks y stores hizo que el código fuera mantenible y escalable. Además de trabajar con una API con una serie realmente divertida.
 
-**2. TypeScript y Type Safety**
-El uso de TypeScript transformó completamente la experiencia de desarrollo. La detección temprana de errores, autocompletado inteligente y la documentación implícita del código hicieron que el desarrollo fuera más seguro y eficiente.
-
-**3. Zustand como State Management**
-La simplicidad y potencia de Zustand superó mis expectativas. Comparado con Redux, la curva de aprendizaje fue mínima y la implementación del sistema de favoritos fue elegante y eficiente.
-
-**4. CSS Modules y Diseño Responsivo**
-La implementación de CSS Modules permitió crear estilos encapsulados y reutilizables. El diseño responsivo fue un desafío técnico interesante que resultó en una experiencia de usuario consistente.
+**2. Zustand como State Management**
+La simplicidad y potencia de Zustand superó mis expectativas. Comparado con Redux, la curva de aprendizaje es mínima y la implementación del sistema de favoritos fue fácil y eficiente. Realmente Zustand es lo mejor.
 
 ### 🚀 Lo que habría mejorado con más tiempo
 
@@ -220,13 +187,7 @@ La implementación de CSS Modules permitió crear estilos encapsulados y reutili
 - Cobertura de tests para hooks personalizados
 - Tests de accesibilidad (a11y)
 
-**2. Optimización de Performance**
-- Implementar virtualización para listas grandes de personajes
-- Lazy loading de imágenes con Next.js Image
-- Implementar Service Workers para cache offline
-- Optimización de bundle size
-
-**3. Funcionalidades Avanzadas**
+**2. Funcionalidades Avanzadas**
 - Implementar JSON Server como requería la prueba
 - Sistema de filtros avanzados (especie, género, ubicación)
 - Paginación infinita
@@ -276,12 +237,7 @@ La configuración inicial de Jest fue problemática debido a conflictos entre Ty
 - ✅ Configuración estable y mantenible
 
 **Aprendizaje:**
-Este problema me enseñó la importancia de mantener configuraciones simples y la necesidad de entender profundamente las dependencias y sus interacciones antes de implementar configuraciones complejas.
+Es muy imporntante mantener configuraciones simples y entender profundamente la interacción entre las dependencias. 
 
 ---
 
-## 📞 Contacto
-
-Para preguntas o sugerencias sobre este proyecto, no dudes en contactarme.
-
-**¡Gracias por revisar mi trabajo! 🚀**
