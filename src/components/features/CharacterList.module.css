@@ -36,7 +36,7 @@
 .charactersGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 45px;
   padding: 20px;
   flex: 1;
   overflow-y: auto;

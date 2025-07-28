@@ -5,10 +5,10 @@ import { Character } from "rickmortyapi";
 import Image from "next/image";
 import { useCharacters } from "../hooks/useCharacters";
 import { useFavoritesStore } from "../store/favoritesStore";
-import SearchBar from "../components/ui/SearchBar";
-import CharacterList from "../components/ui/CharacterList";
-import SelectedCharacter from "../components/ui/SelectedCharacter";
-import FavoritesDropdown from "../components/ui/FavoritesDropdown";
+import SearchBar from "../components/features/SearchBar";
+import CharacterList from "../components/features/CharacterList";
+import SelectedCharacter from "../components/features/SelectedCharacter";
+import FavoritesDropdown from "../components/features/FavoritesDropdown";
 import styles from "./page.module.css";
 
 export default function Home() {
