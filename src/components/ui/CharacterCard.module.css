@@ -1,0 +1,56 @@
+.characterCard {
+  background-color: #212121;
+  border-radius: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  width: 190px;
+  height: 226px;
+  box-shadow: 15px 15px 30px 0px #191919;
+}
+
+.characterCard.selected {
+  border-color: #76DD00;
+}
+
+.imageContainer {
+  position: relative;
+  width: 145px;
+  height: 145px;
+  overflow: hidden;
+}
+
+.characterImage {
+  object-fit: cover;
+}
+
+.characterName {
+  color: #FFFFFF;
+  font-size: 14px;
+  text-align: center;
+}
+
+.likeButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.heartIcon {
+  color: #FFFFFF;
+  font-size: 12px;
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.heartIcon.liked {
+  color: #FF6B6B;
+} 
