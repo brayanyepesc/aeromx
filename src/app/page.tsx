@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Character } from "rickmortyapi";
 import { useCharacters } from "../hooks/useCharacters";
 import SearchBar from "../components/ui/SearchBar";
@@ -13,6 +13,12 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null);
   const [likedCharacters, setLikedCharacters] = useState<number[]>([]);
+
+  useEffect(() => {
+    if (characters.length > 0 && !selectedCharacter) {
+      setSelectedCharacter(characters[0]);
+    }
+  }, [characters, selectedCharacter]);
 
   const handleSearch = (value: string) => {
     setSearchTerm(value);
