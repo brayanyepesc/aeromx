@@ -114,6 +114,7 @@
     background-color: transparent;
   }
   .favsButton {
-    display: none;
+    position: fixed;
+    bottom: 50px;
   } 
 }
