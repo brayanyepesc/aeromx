@@ -32,10 +32,33 @@
   z-index: 10;
 }
 
+.deadTag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #1A1A1A;
+  border-radius: 20px;
+  padding: 5px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  color: white;
+  z-index: 10;
+}
+
 .liveDot {
   width: 15px;
   height: 15px;
   background: radial-gradient(50% 50% at 50% 50%, #F1F510 0%, #608F09 100%);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.deadDot {
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(50% 50% at 50% 50%, #7C1616 0%, #E92507 100%);
   border-radius: 50%;
   animation: pulse 2s infinite;
 }

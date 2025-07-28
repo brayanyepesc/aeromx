@@ -18,11 +18,13 @@ export default function SelectedCharacter({ character }: SelectedCharacterProps)
     );
   }
 
+  const isDead = character.status === 'Dead';
+
   return (
     <div className={styles.container}>
-      <div className={styles.liveTag}>
-        <div className={styles.liveDot}></div>
-        <span>LIVE</span>
+      <div className={`${styles.liveTag} ${isDead ? styles.deadTag : ''}`}>
+        <div className={`${styles.liveDot} ${isDead ? styles.deadDot : ''}`}></div>
+        <span>{isDead ? 'DEAD' : 'LIVE'}</span>
       </div>
       
       <div className={styles.characterImageContainer}>
