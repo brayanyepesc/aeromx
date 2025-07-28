@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Character } from "rickmortyapi";
+import Image from "next/image";
 import { useCharacters } from "../hooks/useCharacters";
 import { useFavoritesStore } from "../store/favoritesStore";
 import SearchBar from "../components/ui/SearchBar";
@@ -52,30 +53,42 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.selectedSection}>
-        <SelectedCharacter character={selectedCharacter} />
-      </div>
-      <div className={styles.listSection}>
-        <SearchBar value={searchTerm} onChange={handleSearch} />
-        <CharacterList
-          characters={characters}
-          selectedCharacter={selectedCharacter}
-          onSelectCharacter={handleSelectCharacter}
-          onLikeCharacter={handleLikeCharacter}
-          loading={loading}
+    <div className={styles.mainContainer}>
+      <div className={styles.logoContainer}>
+        <Image 
+          src="/logos/logo.webp" 
+          alt="Rick & Morty"
+          width={200}
+          height={60}
+          className={styles.logo}
+          priority
         />
-        <div className={styles.favsContainer}>
-          <button 
-            className={`${styles.favsButton} ${isFavoritesOpen ? styles.favsButtonHover : ''}`}
-            onClick={handleFavoritesClick}
-          >
-            FAVS
-          </button>
-          <FavoritesDropdown 
-            isOpen={isFavoritesOpen} 
-            onClose={handleCloseFavorites} 
+      </div>
+      <div className={styles.container}>
+        <div className={styles.selectedSection}>
+          <SelectedCharacter character={selectedCharacter} />
+        </div>
+        <div className={styles.listSection}>
+          <SearchBar value={searchTerm} onChange={handleSearch} />
+          <CharacterList
+            characters={characters}
+            selectedCharacter={selectedCharacter}
+            onSelectCharacter={handleSelectCharacter}
+            onLikeCharacter={handleLikeCharacter}
+            loading={loading}
           />
+          <div className={styles.favsContainer}>
+            <button 
+              className={`${styles.favsButton} ${isFavoritesOpen ? styles.favsButtonHover : ''}`}
+              onClick={handleFavoritesClick}
+            >
+              FAVS
+            </button>
+            <FavoritesDropdown 
+              isOpen={isFavoritesOpen} 
+              onClose={handleCloseFavorites} 
+            />
+          </div>
         </div>
       </div>
     </div>
