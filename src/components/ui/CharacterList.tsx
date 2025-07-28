@@ -41,7 +41,7 @@ export default function CharacterList({
   return (
     <div className={styles.scrollContainer}>
       <div className={styles.charactersGrid}>
-        {characters.slice(0, 4).map((character) => (
+        {characters.map((character) => (
           <CharacterCard
             key={character.id}
             character={character}
