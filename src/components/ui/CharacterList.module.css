@@ -26,11 +26,11 @@
 }
 
 .scrollButton:hover {
-  background-color: rgba(76, 175, 80, 0.8);
+  color: #76DD00;
 }
 
 .scrollButton:active {
-  background-color: rgba(69, 160, 73, 0.9);
+  background-color: #5B5454B2;
 }
 
 .charactersGrid {

@@ -20,7 +20,7 @@ body {
   color: var(--foreground);
   background-image: url('/backgrounds/space-bg.webp');
   background-size: cover;
-  background-position: -600px 120%;
+  background-position: -630px 120%;
   background-repeat: repeat-x;
   background-attachment: fixed;
   min-height: 100vh;
